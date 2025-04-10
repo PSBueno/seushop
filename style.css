@@ -1,144 +1,126 @@
 
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: Arial, sans-serif;
     background: #fff;
     color: #333;
-}
-
-header {
-    background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5);
+  }
+  
+  header {
+    background: linear-gradient(90deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-}
-
-.logo {
+  }
+  
+  .logo {
+    font-size: 2rem;
     font-weight: bold;
-    font-size: 1.5rem;
-}
-
-/* Botões coloridos no topo */
-.links-topo {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.links-topo a {
-    background: white;
-    color: #d62976;
-    padding: 0.4rem 0.8rem;
-    border-radius: 1rem;
+  }
+  
+  nav a {
+    margin-left: 1rem;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-.produtos {
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  .galeria {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    padding: 2rem;
-}
-
-.produto {
-    background: #fafafa;
-    border-radius: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 1rem;
+  }
+  
+  .galeria img {
+    width: 200px;
+    border-radius: 10px;
+  }
+  
+  .produtos {
+    padding: 2rem;
     text-align: center;
-    width: 160px;
-    flex: 1 1 calc(33.33% - 2rem);
-    max-width: 200px;
-}
-
-.produto img {
+  }
+  
+  .produtos h2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .produto {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 1rem;
+    background-color: #fafafa;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .produto img {
     width: 100%;
     height: auto;
-    border-radius: 1rem;
-}
-
-.btn-comprar {
+    border-radius: 10px;
+  }
+  
+  .produto h3 {
+    margin: 0.5rem 0 0.2rem;
+  }
+  
+  .produto p {
+    color: #dc2743;
+    font-weight: bold;
+  }
+  
+  .botao-compra {
     display: inline-block;
-    margin-top: 0.5rem;
+    background: linear-gradient(90deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
     padding: 0.5rem 1rem;
-    background: #d62976;
-    color: white;
-    border: none;
-    border-radius: 2rem;
     text-decoration: none;
-    font-weight: bold;
-}
-
-.modelos {
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .botao-compra:hover {
+    transform: scale(1.05);
+  }
+  
+  .whatsapp-float {
+    background: #128C7E;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 10px;
+  }
+  
+  footer {
     text-align: center;
-    padding: 2rem 1rem;
-}
-
-.modelos .galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.modelos img {
-    width: 100%;
-    max-width: 150px;
-    border-radius: 1rem;
-}
-
-footer {
-    background: #f4f4f4;
     padding: 1rem;
-    text-align: center;
-}
-
-footer .redes a {
-    margin: 0 0.5rem;
-    color: #d62976;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25d366;
-    color: white;
-    padding: 0.7rem 1rem;
-    border-radius: 2rem;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .produto {
-        flex: 1 1 calc(45% - 1rem);
-    }
-    .modelos img {
-        max-width: 100px;
-    }
-    .links-topo {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .produto {
-        flex: 1 1 calc(50% - 1rem);
-    }
-    .modelos img {
-        max-width: 90px;
-    }
-}
+    background-color: #f0f0f0;
+  }
