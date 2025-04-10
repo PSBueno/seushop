@@ -18,16 +18,29 @@ header {
     font-size: 1.5rem;
 }
 
-.preco {
+/* Botões coloridos no topo */
+.links-topo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.links-topo a {
     background: white;
     color: #d62976;
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
 .produtos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
     padding: 2rem;
 }
@@ -38,6 +51,9 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     text-align: center;
+    width: 160px;
+    flex: 1 1 calc(33.33% - 2rem);
+    max-width: 200px;
 }
 
 .produto img {
@@ -73,7 +89,7 @@ header {
 
 .modelos img {
     width: 100%;
-    max-width: 200px;
+    max-width: 150px;
     border-radius: 1rem;
 }
 
@@ -101,4 +117,28 @@ footer .redes a {
     text-decoration: none;
     font-weight: bold;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .produto {
+        flex: 1 1 calc(45% - 1rem);
+    }
+    .modelos img {
+        max-width: 100px;
+    }
+    .links-topo {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .produto {
+        flex: 1 1 calc(50% - 1rem);
+    }
+    .modelos img {
+        max-width: 90px;
+    }
 }
