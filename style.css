@@ -1,123 +1,119 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background: #fff;
     color: #333;
-  }
-  
-  header {
-    background: linear-gradient(90deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+}
+
+header {
+    background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5);
     color: white;
-  }
-  
-  .logo {
-    font-size: 2rem;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.logo {
     font-weight: bold;
-  }
-  
-  nav a {
-    margin-left: 1rem;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .hero {
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-    background: linear-gradient(90deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-  }
-  
-  .galeria {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  
-  .galeria img {
-    width: 200px;
-    border-radius: 10px;
-  }
-  
-  .produtos {
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .produtos h2 {
-    margin-bottom: 1.5rem;
-  }
-  
-  .grid-produtos {
+    font-size: 1.5rem;
+}
+
+.preco {
+    background: white;
+    color: #d62976;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.produto {
+    background: #fafafa;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 1rem;
-  }
-  
-  .produto {
-    border: 1px solid #eee;
-    border-radius: 12px;
-    padding: 1rem;
-    background-color: #fafafa;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-  
-  .produto img {
+    text-align: center;
+}
+
+.produto img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-  }
-  
-  .produto h3 {
-    margin: 0.5rem 0 0.2rem;
-  }
-  
-  .produto p {
-    color: #dc2743;
-    font-weight: bold;
-  }
-  
-  .botao-compra {
+    border-radius: 1rem;
+}
+
+.btn-comprar {
     display: inline-block;
-    background: linear-gradient(90deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    color: white;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 8px;
     margin-top: 0.5rem;
-    transition: transform 0.2s ease;
-  }
-  
-  .botao-compra:hover {
-    transform: scale(1.05);
-  }
-  
-  .whatsapp-float {
-    background: #128C7E;
+    padding: 0.5rem 1rem;
+    background: #d62976;
     color: white;
-    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
     text-decoration: none;
-    border-radius: 10px;
-  }
+    font-weight: bold;
+}
+
+.modelos {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.modelos .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.modelos img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 1rem;
+}
+
+footer {
+    background: #f4f4f4;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer .redes a {
+    margin: 0 0.5rem;
+    color: #d62976;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 0.7rem 1rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .produto h2 {
+        font-size: 1rem;
+    }
+    .btn-comprar {
+        padding: 0.4rem 0.8rem;
+    }
+}
   
   footer {
     text-align: center;
