@@ -27,7 +27,7 @@ header {
 
 .produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
     padding: 2rem;
 }
@@ -102,21 +102,3 @@ footer .redes a {
     font-weight: bold;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-    .produto h2 {
-        font-size: 1rem;
-    }
-    .btn-comprar {
-        padding: 0.4rem 0.8rem;
-    }
-}
-  
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f0f0f0;
-  }
