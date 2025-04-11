@@ -9,7 +9,8 @@
 <body>
   <header>
     <div class="logo">SS</div>
-    <nav>
+    <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+    <nav class="menu">
       <a href="#">Instagram</a>
       <a href="#">Facebook</a>
       <a href="#">Google Shopping</a>
@@ -30,6 +31,7 @@
     <section class="produtos">
       <h2>Produtos</h2>
       <div class="grid-produtos">
+        <!-- Produtos -->
         <div class="produto">
           <img src="img/batom.png" alt="Batom" />
           <h3>Batom</h3>
@@ -77,5 +79,14 @@
   <footer>
     <p>© 2025 SeuShop. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('nav.menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('menu-open');
+    });
+  </script>
 </body>
 </html>
