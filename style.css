@@ -15,32 +15,6 @@ header {
   position: relative;
 }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  color: white;
-  cursor: pointer;
-}
-
-#menu {
-  display: flex;
-  gap: 1rem;
-}
-
-#menu.ativo {
-  display: block;
-  flex-direction: column;
-  position: absolute;
-  top: 70px;
-  right: 1rem;
-  background: #bc1888;
-  border-radius: 10px;
-  padding: 1rem;
-  z-index: 1000;
-}
-
 .logo {
   font-size: 2rem;
   font-weight: bold;
@@ -50,6 +24,35 @@ nav a {
   margin-left: 1rem;
   color: white;
   text-decoration: none;
+}
+
+/* botão do menu - escondido por padrão */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* menu padrão desktop */
+#menu {
+  display: flex;
+  gap: 1rem;
+}
+
+/* estilo para menu aberto no mobile */
+#menu.ativo {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 1rem;
+  background: #bc1888;
+  border-radius: 10px;
+  padding: 1rem;
+  z-index: 1000;
 }
 
 .hero {
@@ -83,10 +86,6 @@ nav a {
   text-align: center;
 }
 
-.produtos h2 {
-  margin-bottom: 1.5rem;
-}
-
 .grid-produtos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -108,7 +107,6 @@ nav a {
 
 .produto img {
   width: 100%;
-  height: auto;
   border-radius: 10px;
 }
 
@@ -150,15 +148,20 @@ footer {
   background-color: #f0f0f0;
 }
 
+/* mostra o botão e adapta o menu apenas em telas pequenas */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
   #menu {
     display: none;
     flex-direction: column;
     gap: 1rem;
   }
 
-  .menu-toggle {
-    display: block;
+  #menu.ativo {
+    display: flex;
   }
 
   nav a {
