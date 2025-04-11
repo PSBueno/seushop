@@ -1,91 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SeuShop</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="logo">SS</div>
-    <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-    <nav class="menu">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">Google Shopping</a>
+  <header class="header">
+    <h1><span class="logo">SS</span> SeuShop</h1>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <nav class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <h1>Maquiagens por R$10</h1>
-    </section>
-
-    <section class="galeria">
-      <img src="img/modelo1.png" alt="Modelo usando batom" />
-      <img src="img/modelo2.png" alt="Modelo com maquiagem leve" />
-      <img src="img/modelo3.png" alt="Modelo com rímel e iluminador" />
-    </section>
-
-    <section class="produtos">
-      <h2>Produtos</h2>
-      <div class="grid-produtos">
-        <!-- Produtos -->
-        <div class="produto">
-          <img src="img/batom.png" alt="Batom" />
-          <h3>Batom</h3>
-          <p>R$10,00</p>
-          <a href="https://www.mercadopago.com.br/batom" target="_blank" class="botao-compra">Comprar</a>
-        </div>
-        <div class="produto">
-          <img src="img/corretivo.png" alt="Corretivo" />
-          <h3>Corretivo</h3>
-          <p>R$10,00</p>
-          <a href="https://www.mercadopago.com.br/corretivo" target="_blank" class="botao-compra">Comprar</a>
-        </div>
-        <div class="produto">
-          <img src="img/base.png" alt="Base" />
-          <h3>Base</h3>
-          <p>R$10,00</p>
-          <a href="https://www.mercadopago.com.br/base" target="_blank" class="botao-compra">Comprar</a>
-        </div>
-        <div class="produto">
-          <img src="img/iluminador.png" alt="Iluminador" />
-          <h3>Iluminador</h3>
-          <p>R$10,00</p>
-          <a href="https://www.mercadopago.com.br/iluminador" target="_blank" class="botao-compra">Comprar</a>
-        </div>
-        <div class="produto">
-          <img src="img/rimel.png" alt="Rímel" />
-          <h3>Rímel</h3>
-          <p>R$10,00</p>
-          <a href="https://www.mercadopago.com.br/rimel" target="_blank" class="botao-compra">Comprar</a>
-        </div>
-        <div class="produto">
-          <img src="img/po.png" alt="Pó Translúcido" />
-          <h3>Pó Translúcido</h3>
-          <p>R$10,00</p>
-          <a href="https://www.mercadopago.com.br/po" target="_blank" class="botao-compra">Comprar</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="comprar">
-      <a href="https://wa.me/5567996084843" class="whatsapp-float" target="_blank">Fale no WhatsApp</a>
+      <h2>Maquiagem linda por R$10</h2>
+      <p>Base, batom, iluminador e mais!</p>
+      <a href="https://wa.me/5567996084843" class="btn">Comprar no WhatsApp</a>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 SeuShop. Todos os direitos reservados.</p>
+  <footer class="footer">
+    <p>&copy; 2025 SeuShop. Todos os direitos reservados.</p>
   </footer>
 
   <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('nav.menu');
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('menu-open');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
     });
   </script>
 </body>
